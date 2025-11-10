@@ -1,0 +1,159 @@
+body {
+  background-color: #201313;
+  color: #faf9f9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0 20px;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #444;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.logo a {
+  font-size: 5.5rem;
+  font-weight: bold;
+  color: #faf9f9;
+}
+a {
+  text-decoration: none;
+  color: #faf9f9;
+  font-weight: bold;
+}
+
+/* Meta/author styling for entries */
+.meta {
+  margin-top: 0.25rem;
+  color: #d8d8d8; /* default meta color */
+  font-size: 0.95rem;
+}
+
+/* Only the author's name should change color */
+.author {
+  color: #ffe7a3; /* highlight the author's name */
+  font-weight: 600;
+}
+a:hover {
+  color: #ffc726;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-links a:hover {
+  color: #ffc726;
+}
+button {
+  background-color: #e03131;
+  color: #faf9f9;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.9;
+  border: #e03131 2px solid;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+p a {
+  color: #d8d8d8;
+  text-decoration: underline;
+  font-size: 2rem;
+}
+.paragh {
+  font-size: 1.25rem;
+}
+.paragh a {
+  color: #ffc726;
+  text-decoration: underline;
+  font-size: 1.25rem;
+}
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 40px 0;
+}
+.topics {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0px;
+  margin-top: 40px;
+}
+.topics a {
+  color: #faf9f9;
+  text-decoration: none;
+  border: 1px solid #555;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.topics a.more-topics {
+  border: none;
+  background: none;
+  padding: 0;
+  text-decoration: underline;
+}
+.topics a.all-topics {
+  background-color: #ffc726;
+  color: #2f1c1c;
+  border-color: #ffc726;
+}
+.boxx1 {
+  border: 2px solid #444;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  background-color: #2f1c1c;
+}
+input[type="email"] {
+  width: 80%;
+  height: 90px;
+  background-color: #2f1c1c;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #e03131;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #e03131;
+}
+.linn {
+  color: #ffe7a3;
+}
+
+.boxx2 {
+  display: flex;
+  align-items: right;
+  gap: 15px;
+  padding: 0px;
+  margin-top: 40px;
+
+  padding: 0;
+}
