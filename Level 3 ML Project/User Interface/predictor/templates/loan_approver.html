@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Loan Approver Predictor{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="mb-4 text-center">Loan Approval Predictor</h2>
+        
+        <div class="card p-4">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-success btn-lg">Check Eligibility</button>
+                </div>
+            </form>
+            
+            {% if prediction %}
+                {% if prediction == 'APPROVED' %}
+                <div class="result-box result-approved mt-4">
+                    <h4>Application Status:</h4>
+                    <h1 class="display-5 fw-bold mb-3">✅ APPROVED</h1>
+                    <p class="mb-0 fs-5">Confidence Score: <strong>{{ probability }}</strong></p>
+                </div>
+                {% else %}
+                <div class="result-box result-denied mt-4">
+                    <h4>Application Status:</h4>
+                    <h1 class="display-5 fw-bold mb-3">❌ DENIED</h1>
+                    <p class="mb-0 fs-5">Extracted probability: <strong>{{ probability }}</strong></p>
+                </div>
+                {% endif %}
+            {% endif %}
+        </div>
+        
+        <div class="mt-3 text-center">
+            <a href="{% url 'home' %}" class="text-decoration-none">← Back to Dashboard</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
