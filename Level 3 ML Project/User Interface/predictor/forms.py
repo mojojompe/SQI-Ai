@@ -1,7 +1,4 @@
 from django import forms
-
-# Try loading city layout file. In typical setup this runs after server starts.
-# Loading from joblib at forms.py load time might fail if file missing, handled later or gracefully
 import joblib
 import os
 from django.conf import settings
@@ -13,7 +10,7 @@ def get_city_choices():
         city_list_path = os.path.join(models_dir, 'city_classes.pkl')
         if os.path.exists(city_list_path):
             cities = joblib.load(city_list_path)
-            # Make choices tuple: ('ajah', 'ajah')
+            
             return [(city, city.capitalize()) for city in cities]
     except Exception:
         pass
